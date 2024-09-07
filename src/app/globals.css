@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .btn {
+    @apply bg-black px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight text-white;
+  }
+  .btn-primary {
+    @apply bg-black text-white;
+  }
+  .btn-text {
+    @apply bg-transparent text-black;
+  }
+}
+
+.rainbow_gradient {
+  background: linear-gradient(
+    to right,
+    hsl(296, 100%, 92%, 0.7),
+    hsl(191, 100%, 58%, 0.7),
+    hsl(59, 100%, 75%, 0.7),
+    hsl(336, 87%, 79%, 0.7),
+    hsl(296, 100%, 92%, 0.7)
+  );
+}
+.gradient-text {
+  background: linear-gradient(to bottom, hsl(0, 0%, 0%), hsl(226, 100%, 25%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero_gradient {
+  background: linear-gradient(
+    to bottom,
+    hsl(0, 0%, 0%) 0%,
+    hsl(262, 67%, 15%) 34%,
+    hsl(262, 66%, 38%) 65%,
+    hsl(270, 60%, 65%) 82%
+  );
+}
+
+.radial_gradient {
+  background: radial-gradient(
+    ellipse 200% 100% at bottom left,
+    #183ec2,
+    #eaeefe 100%
+  );
+}

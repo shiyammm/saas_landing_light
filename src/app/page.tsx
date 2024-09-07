@@ -1,9 +1,16 @@
-import React from 'react'
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import Marque from '@/components/Marque';
+import React from 'react';
 
 const page = () => {
   return (
-    <h1>Page</h1>
-  )
-}
+    <>
+      <Header />
+      <Hero />
+      <Marque />
+    </>
+  );
+};
 
-export default page
+export default page;

@@ -4,10 +4,9 @@ import Image from 'next/image';
 import AppLogo from '@/assets/logosaas.png';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import Link from 'next/link';
+import { navLinks } from '@/constants/data';
 
 function Header() {
-  const navLinks = ['about', 'features', 'updates', 'help', 'customers'];
-
   return (
     <header className="sticky top-0 text-white backdrop-blur-sm z-50">
       <div className="flex items-center justify-center py-3 bg-black gap-3">

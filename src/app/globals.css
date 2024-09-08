@@ -9,6 +9,9 @@
   .btn-primary {
     @apply bg-black text-white;
   }
+  .btn-secondary {
+    @apply bg-white text-black;
+  }
   .btn-text {
     @apply bg-transparent text-black;
   }
@@ -48,4 +51,19 @@
     #183ec2,
     #eaeefe 100%
   );
+}
+.gradient_tag {
+  background: linear-gradient(
+    to right,
+    #dd7dff,
+    #e1cd86,
+    #8bcb92,
+    #71c2ef,
+    #3bffff,
+    #dd7dff
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }

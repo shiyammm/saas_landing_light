@@ -1,3 +1,5 @@
+'use client';
+import { motion } from 'framer-motion';
 import React from 'react';
 import { IoCheckmark } from 'react-icons/io5';
 
@@ -30,9 +32,20 @@ const PriceCards = ({ price }: { price: priceDetailsType }) => {
           </h4>
           {isPopular && (
             <div>
-              <button className="text-sm px-2 py-1 rounded-xl border border-gray-200/50 gradient_tag font-semibold">
+              <motion.span
+                className="text-sm px-2.5 py-1.5 rounded-lg border border-gray-100/30 gradient_tag font-semibold"
+                animate={{
+                  backgroundPositionX: '-100%',
+                }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 2,
+                  ease: 'linear',
+                  repeatType: 'loop',
+                }}
+              >
                 Most popular
-              </button>
+              </motion.span>
             </div>
           )}
         </div>

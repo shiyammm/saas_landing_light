@@ -1,12 +1,30 @@
-import React from 'react';
+'use client';
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import productImage from '@/assets/product-image.png';
 import pyramid from '@/assets/pyramid.png';
 import tube from '@/assets/tube.png';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const ProductShowcase = () => {
+  const productRef = useRef(null);
+
+  const imageRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: productRef,
+    offset: ['start end', 'end end'],
+  });
+
+  const rotateX = useTransform(scrollYProgress, [0, 1], [20, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.3, 1]);
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
   return (
-    <section className="py-24 bg-gradient-to-b from-[#FFFF] to-[#D2DCFF] overflow-hidden">
+    <section
+      className="py-24 bg-gradient-to-b from-[#FFFF] to-[#D2DCFF] overflow-hidden"
+      ref={productRef}
+    >
       <div className="container ">
         <div className="relative">
           <div className="space-y-5 items-center flex flex-col justify-center">
@@ -23,23 +41,40 @@ const ProductShowcase = () => {
               Celebrate the joy of accomplishment with an app designed to track
               your progress and motivate your efforts.
             </p>
-            <div>
+            <motion.div
+              ref={imageRef}
+              style={{
+                opacity: opacity,
+                transformPerspective: '800px',
+                rotateX: rotateX,
+              }}
+            >
               <Image src={productImage} alt="product-img" />
-            </div>
+            </motion.div>
           </div>
-          <Image
-            src={pyramid}
+          <motion.img
+            src={pyramid.src}
             alt="pyramid"
-            className="md:absolute hidden md:block -right-[7rem] top-[9rem] xl:top-[13.5rem]"
+            className="md:absolute hidden md:block -right-[7rem] top-[15rem] xl:top-[13.5rem]"
             width={262}
             height={262}
+            drag
+            draggable="false"
+            style={{
+              translateY: translateY,
+            }}
           />
-          <Image
-            src={tube}
+          <motion.img
+            src={tube.src}
             alt="tube-img"
-            className="md:absolute hidden md:block -left-[9rem] bottom-[1.5rem] xl:bottom-[5rem]"
+            className="md:absolute hidden md:block -left-[9rem] bottom-[2rem] xl:bottom-[5rem]"
             width={248}
             height={248}
+            drag
+            draggable="false"
+            style={{
+              translateY: translateY,
+            }}
           />
         </div>
       </div>

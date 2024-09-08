@@ -60,10 +60,15 @@
     #8bcb92,
     #71c2ef,
     #3bffff,
-    #dd7dff
+    #dd7dff,
+    #e1cd86,
+    #8bcb92,
+    #71c2ef,
+    #3bffff
   );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
+  background-size: 200%;
 }

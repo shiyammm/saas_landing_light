@@ -30,7 +30,7 @@ const TestimonialCards = ({
           translateY: '-50%',
         }}
         transition={{
-          duration: duration,
+          duration: duration || 10,
           repeat: Infinity,
           repeatType: 'loop',
           ease: 'linear',

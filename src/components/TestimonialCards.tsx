@@ -14,7 +14,7 @@ type TestimonialType = {
 type TestimonialCardsProps = {
   testimonials: TestimonialType[];
   className?: string;
-  duration: number;
+  duration?: number;
 };
 
 const TestimonialCards = ({

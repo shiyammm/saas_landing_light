@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MdArrowRightAlt } from 'react-icons/md';
 import Image from 'next/image';
 import AppLogo from '@/assets/logosaas.png';

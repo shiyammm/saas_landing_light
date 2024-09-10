@@ -13,7 +13,7 @@ const CallToAction = () => {
     offset: ['start end', 'end end'],
   });
 
-  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+  const translateY = useTransform(scrollYProgress, [0, 1], [170, -170]);
 
   return (
     <section className="py-20 md:py-24 bg-gradient-to-b from-white to-[#D2DCFF] overflow-x-clip">
@@ -38,9 +38,11 @@ const CallToAction = () => {
           <motion.img
             src={Star.src}
             alt="star-img"
-            className="md:block md:absolute -top-[9rem] -left-[14rem] xl:-left-[4rem] hidden"
+            className="md:block md:absolute -top-[1rem] -left-[14rem] xl:-left-[2rem] hidden"
             width={320}
             height={320}
+            drag
+            draggable="false"
             style={{
               translateY: translateY,
             }}
@@ -48,9 +50,11 @@ const CallToAction = () => {
           <motion.img
             src={Spring.src}
             alt="spring-img"
-            className="md:block md:absolute -bottom-[6rem] -right-[13rem] xl:-right-[0rem]  hidden"
+            className="md:block md:absolute -bottom-[14rem] -right-[13rem] xl:-right-[0rem]  hidden"
             width={320}
             height={320}
+            drag
+            draggable="false"
             style={{
               translateY: translateY,
             }}

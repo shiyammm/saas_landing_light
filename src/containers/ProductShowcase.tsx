@@ -55,7 +55,7 @@ const ProductShowcase = () => {
           <motion.img
             src={pyramid.src}
             alt="pyramid"
-            className="md:absolute hidden md:block -right-[7rem] top-[15rem] xl:top-[13.5rem]"
+            className="md:absolute hidden md:block -right-[7rem] top-[15rem] xl:top-[18.5rem]"
             width={262}
             height={262}
             drag
@@ -67,7 +67,7 @@ const ProductShowcase = () => {
           <motion.img
             src={tube.src}
             alt="tube-img"
-            className="md:absolute hidden md:block -left-[9rem] bottom-[2rem] xl:bottom-[5rem]"
+            className="md:absolute hidden md:block -left-[9rem] bottom-[2rem] xl:bottom-[0rem]"
             width={248}
             height={248}
             drag

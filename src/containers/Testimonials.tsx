@@ -5,7 +5,7 @@ const Testimonials = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container">
-        <div className="flex items-center justify-center text-center flex-col space-y-8">
+        <div className="flex items-center justify-center text-center flex-col space-y-8 pb-10">
           <span className="px-4 py-1 rounded-lg tracking-tighter border border-gray-400/50 text-center text-sm font-semibold">
             Testimonials{' '}
           </span>
